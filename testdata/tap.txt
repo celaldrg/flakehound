@@ -1,0 +1,14 @@
+TAP version 13
+1..6
+ok 1 - parses numbers
+not ok 2 - handles unicode
+  ---
+  message: expected "İ" got "I"
+  at: lib/text.js:88
+  ...
+ok 3 - slow thing # SKIP too slow on CI
+not ok 4 - not implemented # TODO later
+# a comment
+not ok 5 - connects
+# ECONNRESET reading response
+ok 6

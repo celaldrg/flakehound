@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="all">
+  <testsuite name="pkg.OrderTest" tests="5" failures="1" errors="1" skipped="1">
+    <testcase classname="pkg.OrderTest" name="creates_order" time="0.120"/>
+    <testcase classname="pkg.OrderTest" name="cancels_order" time="1.5">
+      <failure message="expected 3 but was 4" type="AssertionError">at OrderTest.java:42</failure>
+    </testcase>
+    <testcase classname="pkg.OrderTest" name="pays_order" time="0.3">
+      <error type="java.net.ConnectException">Connection refused: localhost:5432</error>
+    </testcase>
+    <testcase classname="pkg.OrderTest" name="ships_order" time="0">
+      <skipped message="not yet"/>
+    </testcase>
+    <testcase classname="pkg.OrderTest" name="rescued_by_retry" time="0.2">
+      <flakyFailure message="timeout after 5s" type="TimeoutException">stack</flakyFailure>
+      <flakyFailure message="timeout after 5s" type="TimeoutException">stack</flakyFailure>
+    </testcase>
+  </testsuite>
+  <testsuite name="other">
+    <testcase name="no_classname" time="bogus"/>
+  </testsuite>
+</testsuites>

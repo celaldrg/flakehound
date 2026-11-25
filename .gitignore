@@ -1,0 +1,4 @@
+/flakehound
+/dist/
+.flakehound/
+report.json

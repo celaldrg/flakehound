@@ -1,0 +1,16 @@
+{
+  "numFailedTestSuites": 2,
+  "testResults": [
+    {
+      "name": "/repo/src/a.test.js",
+      "status": "failed",
+      "assertionResults": [
+        {"fullName": "a adds", "title": "adds", "status": "passed", "duration": 3},
+        {"fullName": "a fetches", "title": "fetches", "status": "failed", "duration": 5012.5, "failureMessages": ["Error: thrown: \"Exceeded timeout of 5000 ms for a test.\""]},
+        {"fullName": "a later", "title": "later", "status": "pending"},
+        {"fullName": "a retried", "title": "retried", "status": "passed", "duration": 9, "invocations": 3}
+      ]
+    },
+    {"name": "/repo/src/b.test.js", "status": "failed", "message": "SyntaxError: Unexpected token", "assertionResults": []}
+  ]
+}

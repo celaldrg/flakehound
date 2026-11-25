@@ -1,0 +1,25 @@
+# github.com/x/y [build noise before the stream]
+{"Action":"start","Package":"x/pay"}
+{"Action":"run","Package":"x/pay","Test":"TestCharge"}
+{"Action":"output","Package":"x/pay","Test":"TestCharge","Output":"=== RUN   TestCharge\n"}
+{"Action":"output","Package":"x/pay","Test":"TestCharge","Output":"    pay_test.go:21: dial tcp 127.0.0.1:41233: connection refused\n"}
+{"Action":"output","Package":"x/pay","Test":"TestCharge","Output":"--- FAIL: TestCharge (0.02s)\n"}
+{"Action":"fail","Package":"x/pay","Test":"TestCharge","Elapsed":0.02}
+{"Action":"run","Package":"x/pay","Test":"TestTable"}
+{"Action":"run","Package":"x/pay","Test":"TestTable/a"}
+{"Action":"pass","Package":"x/pay","Test":"TestTable/a","Elapsed":0}
+{"Action":"run","Package":"x/pay","Test":"TestTable/b"}
+{"Action":"output","Package":"x/pay","Test":"TestTable/b","Output":"    pay_test.go:40: got 2 want 3\n"}
+{"Action":"fail","Package":"x/pay","Test":"TestTable/b","Elapsed":0}
+{"Action":"fail","Package":"x/pay","Test":"TestTable","Elapsed":0}
+{"Action":"run","Package":"x/pay","Test":"TestOK"}
+{"Action":"pass","Package":"x/pay","Test":"TestOK","Elapsed":0.01}
+{"Action":"run","Package":"x/pay","Test":"TestSkipped"}
+{"Action":"skip","Package":"x/pay","Test":"TestSkipped","Elapsed":0}
+{"Action":"run","Package":"x/pay","Test":"TestRetried"}
+{"Action":"fail","Package":"x/pay","Test":"TestRetried","Elapsed":0.1}
+{"Action":"run","Package":"x/pay","Test":"TestRetried"}
+{"Action":"pass","Package":"x/pay","Test":"TestRetried","Elapsed":0.1}
+{"Action":"fail","Package":"x/pay","Elapsed":0.2}
+{"Action":"output","Package":"x/broken","Output":"panic: boom\n"}
+{"Action":"fail","Package":"x/broken","Elapsed":0}
